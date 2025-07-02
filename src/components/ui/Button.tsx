@@ -1,3 +1,4 @@
+
 interface ButtonProps {
     style: string;
     text: string;
@@ -9,4 +10,8 @@ export default function Button(props: ButtonProps ) {
       {props.text}
     </button>
   );
+
 }
+
+}
+

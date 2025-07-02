@@ -11,6 +11,6 @@ import RegistroPage from './components/pages/RegistroPage'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RegistroPage />
+    <AcordePage />
   </StrictMode>,
 )

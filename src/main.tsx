@@ -7,6 +7,7 @@ import CreateEventPage from './components/pages/CreateEventPage'
 import AcordePage from './components/pages/AcordePage'
 import NavBar from './components/ui/NavBar'
 
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HomePage />

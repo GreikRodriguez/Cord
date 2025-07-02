@@ -1,11 +1,10 @@
 import Button from "../ui/Button";
+import NavBar from "../ui/NavBar";
 
 export default function HomePage() {
     return (
         <div className="min-h-screen bg-[#F1EEF9]">
-            <div className="bg-[#3B3D5E] p-4 flex justify-between items-center rounded-b-lg">
-                <button className="text-white text-lg font-semibold bg-[#B99F7B] rounded-full px-4 py-2">Menú</button>
-            </div>
+            <NavBar/>
 
             <div className="p-4">
                 <Button style="w-full bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-3 rounded-lg text-lg mb-6" text="Crear nuevo evento" />

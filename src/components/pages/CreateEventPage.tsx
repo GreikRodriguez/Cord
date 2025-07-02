@@ -37,7 +37,7 @@ export default function CreateEventPage() {
         <div className="mb-6">
             <label htmlFor="event-description" className="block text-gray-700 text-sm font-semibold mb-2">Descripcion</label>
             <p className="text-gray-600 mb-2">Por favor añada todos los detalles adecuadamente.</p>
-            <textarea id="event-description" rows="5" className="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#F1EEF9]"></textarea>
+           <TextInput id="event-description" text="Descripcion" inputType="textarea" style="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#F1EEF9]"/>
         </div>
 
         <div className="mb-6">
@@ -54,8 +54,8 @@ export default function CreateEventPage() {
             <p className="text-gray-700 text-sm font-semibold mb-2">Invitados</p>
             <p className="text-gray-600 mb-2">Cuantos invitados espera?</p>
             <div className="flex space-x-4">
-                <input type="number" placeholder="Max Inv" className="flex-1 shadow-sm appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#F1EEF9]"/>
-                <input type="number" placeholder="Min Inv" className="flex-1 shadow-sm appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#F1EEF9]"/>
+                 <TextInput id="event-max-inv" text="Max Inv" inputType="number" style="flex-1 shadow-sm appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#F1EEF9]"/>
+                <TextInput id="event-min-inv" text="Min Inv" inputType="number" style="flex-1 shadow-sm appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#F1EEF9]"/>
             </div>
         </div>
     </div>
@@ -67,20 +67,16 @@ export default function CreateEventPage() {
             <svg className="w-6 h-6 mr-3 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
             </svg>
-            <p className="text-gray-700 font-semibold">Ubicacion</p>
+            <TextInput id="event-location" text="Ubicacion" inputType="text" style="flex-1 shadow-sm appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#F1EEF9]"/>
         </div>
         <p className="text-gray-600 mb-4">Quieres añadir un link externo?</p>
-        <button className="w-full bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-2 px-4 rounded-full mb-6">
-            Agregar link
-        </button>
+       <Button style="w-full bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-2 px-4 rounded-full" text="Añadir link externo"/>
     </div>
 
     <div className="bg-white rounded-lg shadow-md p-6 mb-6">
         <h2 className="text-[#3B3D5E] text-xl font-semibold mb-4">Categoria</h2>
         <p className="text-gray-600 mb-6">Por favor añada etiquetas o categorías en las cuales su evento se encuentra</p>
-        <button className="w-full bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-2 px-4 rounded-full">
-            Categorias
-        </button>
+        <Button style="w-full bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-2 px-4 rounded-full" text="Agregar categoria"/>
     </div>
 
     <div className="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -115,15 +111,8 @@ export default function CreateEventPage() {
     </div>
 
     <div className="flex justify-between mt-8">
-        <button className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-3 px-6 rounded-lg text-lg">
-            <svg className="w-6 h-6 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path>
-            </svg>
-            X
-        </button>
-        <button className="bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-3 px-6 rounded-lg text-lg">
-            Finalizar
-        </button>
+        <Button style="bg-gray-500 hover:bg-[#A38D6D] text-white font-bold py-3 px-6 rounded-lg text-lg" text="Salir "/>
+        <Button style="bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-3 px-6 rounded-lg text-lg" text="Terminar"/>
     </div>
 </div>
 

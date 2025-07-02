@@ -9,6 +9,6 @@ import NavBar from './components/ui/NavBar'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HomePage />
+    <CreateEventPage/>
   </StrictMode>,
 )

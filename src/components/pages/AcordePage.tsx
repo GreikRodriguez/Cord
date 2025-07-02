@@ -1,11 +1,12 @@
 import LogoAcorde from "../ui/LogoAcorde";
+import LetrasAcorde from "../ui/LetrasAcorde";
 
 export default function AcordePage() {
     return (
     <div className="min-h-screen min-w-screen flex items-center justify-center bg-[#EBEAFC]">
         <div className="text-center">
-            <LogoAcorde />
-            <p className="text-6xl font-family-poppins font-bold text-[#2C558D]">ACORDE</p>
+            <LogoAcorde style="mx-auto my-auto max-w-60 max-h-60 mb-4" src="src/assets/imgs/LogoAcordeAzul.png"/>
+            <LetrasAcorde style="text-6xl font-bold text-[#2C558D]" text="ACORDE"/>
         </div>
     </div>
     );

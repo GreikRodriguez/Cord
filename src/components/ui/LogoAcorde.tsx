@@ -1,10 +1,10 @@
 interface LogoAcordeProps {
-    img: string;
+    src: string;
     style: string;
 }
  
-export default function LogoAcordeProps() {
+export default function LogoAcordeProps(props: LogoAcordeProps) {
   return (
-    <img className="mx-auto my-auto max-w-60 max-h-60 mb-4" src="src/assets/imgs/LogoAcordeAzul.png" alt="Logo Acorde"/>
+    <img className={props.style} src={props.src} alt="Logo Acorde"/>
   );
 }

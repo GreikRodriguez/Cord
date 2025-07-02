@@ -9,4 +9,4 @@ export default function Button(props: ButtonProps ) {
       {props.text}
     </button>
   );
-}
+

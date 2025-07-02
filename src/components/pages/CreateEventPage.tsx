@@ -1,5 +1,6 @@
 import TextInput from "../ui/TextInput"; 
 import Button from "../ui/Button";
+
 export default function CreateEventPage() {
     return (
 <div className="min-h-screen bg-[#F1EEF9] p-4">

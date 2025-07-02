@@ -1,9 +1,9 @@
-interface ButtonProps {
+interface LetrasAcordeProps {
     style: string;
     text: string;
 }
  
-export default function Button(props: ButtonProps ) {
+export default function LetrasAcorde(props: LetrasAcordeProps ) {
   return (
     <button className={props.style}>
       {props.text}

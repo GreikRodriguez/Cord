@@ -6,10 +6,11 @@ import HomePage from './components/pages/HomePage'
 import CreateEventPage from './components/pages/CreateEventPage'
 import AcordePage from './components/pages/AcordePage'
 import NavBar from './components/ui/NavBar'
+import CategoriesPage from './components/ui/CategoriesPage'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <CreateEventPage/>
+    <CategoriesPage/>
   </StrictMode>,
 )

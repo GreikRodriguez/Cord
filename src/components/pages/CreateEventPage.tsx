@@ -15,7 +15,7 @@ export default function CreateEventPage() {
         <div className="mb-6">
             <p className="text-gray-700 text-sm font-semibold mb-2">Opcional</p>
             <div className="flex space-x-4">
-                <Button style="flex-1 bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-2 px-4 rounded-full" text="Duracion aproximada"/>
+                <Button style="flex-1 bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-2 px-4 rounded-full" text="Fecha de finalización"/>
 
                 <Button style="flex-1 bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-2 px-4 rounded-full" text="Duracion aproximada"/>
             </div>

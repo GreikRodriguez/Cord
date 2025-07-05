@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../common/Button";
 export default function CategoriesPage() {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-900 bg-opacity-75 p-4">

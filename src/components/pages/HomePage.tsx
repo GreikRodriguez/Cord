@@ -1,5 +1,5 @@
-import Button from "../ui/Button";
-import NavBar from "../ui/NavBar";
+import Button from "../common/Button";
+import NavBar from "../common/NavBar";
 
 export default function HomePage() {
     return (

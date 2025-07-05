@@ -1,6 +1,6 @@
-import Button from "../ui/Button";
-import TextInput from "../ui/TextInput";
-import LogoAcorde from "../ui/LogoAcorde";
+import Button from "../common/Button";
+import TextInput from "../common/TextInput";
+import LogoAcorde from "../common/LogoAcorde";
 import LetrasAcorde from "../ui/LetrasAcorde";
 
 export default function HomePage() {

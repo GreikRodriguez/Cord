@@ -1,4 +1,4 @@
-import LogoAcorde from "../ui/LogoAcorde";
+import LogoAcorde from "../common/LogoAcorde";
 import LetrasAcorde from "../ui/LetrasAcorde";
 
 export default function AcordePage() {

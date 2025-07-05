@@ -6,7 +6,7 @@ interface NavBarProps {
 
 export default function NavBar(props: NavBarProps) {
   return (
-    <div className="bg-primary-dark p-4 flex justify-between items-center rounded-b-lg">
+    <div className="bg-sky-900 p-4 flex justify-between items-center rounded-b-lg">
       <Button
         text="Menú"
         style="text-white text-lg font-semibold bg-accent-brown rounded-full px-4 py-2"

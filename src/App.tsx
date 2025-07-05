@@ -21,8 +21,10 @@ import Button from './components/common/Button'; // Importa tu componente Button
 
 export default function App() {
   // Puedes cambiar esto manualmente para ver diferentes páginas
-  const [currentPage, setCurrentPage] = useState('welcome'); // 'welcome', 'login', 'register', 'home', 'profile', 'calendar', 'organizers', 'notifications', 'personal-chats', 'event-chats', 'new-event'
+  const [currentPage, setCurrentPage] = useState('acorde'); // 'welcome', 'login', 'register', 'home', 'profile', 'calendar', 'organizers', 'notifications', 'personal-chats', 'event-chats', 'new-event'
 
+
+  
   // Función de ejemplo para cambiar de página (en una app real usarías un router como React Router DOM)
   const renderPage = () => {
     switch (currentPage) {

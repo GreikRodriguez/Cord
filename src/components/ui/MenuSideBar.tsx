@@ -1,3 +1,4 @@
+import { Link } from '@tanstack/react-router';
 
 interface SideMenuProps {
   onClose: () => void; // Prop para cerrar el menú

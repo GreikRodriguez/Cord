@@ -1,6 +1,21 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import { RouterProvider, createRouter } from '@tanstack/react-router'
+// Import the generated route tree
+import { routeTree } from './routeTree.gen'
+
+// Create a new router instance
+const router = createRouter({ routeTree })
+
+// Register the router instance for type safety
+declare module '@tanstack/react-router' {
+  interface Register {
+    router: typeof router
+  }
+}
+
+
 import App from './App'
 import HomePage from './components/pages/HomePage'
 import CreateEventPage from './components/pages/CreateEventPage'
@@ -12,7 +27,7 @@ import RegistroPage from './components/pages/RegistroPage'
 import PerfilPage from './components/pages/ProfilePage'
 import PerfilChats from './components/pages/PersonalChatsPage'
 import PerfilEvents from './components/pages/EventsChatsPage'
-import CalendarPage from './components/pages/CalednarPage'
+import CalendarPage from './components/pages/CalendarPage'
 import OrgPage from './components/pages/OrganizerPage'
 import Notifications from './components/pages/NotificationsPage'
 
@@ -21,7 +36,7 @@ import Notifications from './components/pages/NotificationsPage'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
 
-    <App />
+    <RouterProvider router={router} />
 
   </StrictMode>,
-)
+);

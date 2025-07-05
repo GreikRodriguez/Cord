@@ -1,4 +1,6 @@
+import { defineHandlerCallback } from "@tanstack/react-router/ssr/server";
 import Button from "../common/Button";
+import { Link } from "@tanstack/react-router";
 
 interface SideMenuProps {
   isOpen: boolean; // Controla si el menú está visible
@@ -28,7 +30,9 @@ export default function SideMenu(props: SideMenuProps) {
                   />
               </div>
               <nav className="space-y-4">
-                  <Button text="Perfil" style="block w-full text-left py-2 px-4 rounded-lg text-white hover:bg-accent-brown" />
+                  <Button text="Perfil" style="block w-full text-left py-2 px-4 rounded-lg text-white hover:bg-accent-brown" 
+                  onClick={() => console.log("Perfil clicked")}/>
+
                   <Button text="Chats" style="block w-full text-left py-2 px-4 rounded-lg text-white hover:bg-accent-brown" />
                   <Button text="Calendario" style="block w-full text-left py-2 px-4 rounded-lg text-white hover:bg-accent-brown" />
                   <Button text="Organizadores" style="block w-full text-left py-2 px-4 rounded-lg text-white hover:bg-accent-brown" />

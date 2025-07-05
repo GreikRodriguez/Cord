@@ -1,5 +1,5 @@
-import TextInput from "../ui/TextInput"; 
-import Button from "../ui/Button";
+import TextInput from "../common/TextInput"; 
+import Button from "../common/Button";
 
 export default function CreateEventPage() {
     return (

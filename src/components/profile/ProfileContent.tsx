@@ -1,13 +1,24 @@
 import Button from "../common/Button";
-
+import { useNavigate } from '@tanstack/react-router';
+import Card from "../common/Card";
 
 export default function ProfileContent() {
+  const navigate = useNavigate();
+
+ const handleGeneric = () => {
+    // Redirige al usuario a la página de Generic
+    navigate({ to: '/Generic' });
+  };
+  const handleHome = () => {
+    // Redirige al usuario a la página de registro
+    navigate({ to: '/home' });
+  };
+
+
   return (
     <div className="p-6 text-center">
         <div className="w-32 h-32 rounded-full bg-light-bg border-4 border-accent-brown mx-auto mb-4 flex items-center justify-center">
-            {/* Placeholder para la imagen de perfil */}
-            {/* <img src="/images/profile_avatar.png" alt="Profile Avatar" className="w-full h-full rounded-full object-cover" /> */}
-            <span className="text-gray-500 text-sm">Foto de Perfil</span>
+            
         </div>
         <p className="text-2xl font-bold text-primary-dark mb-4">Nombre Usuario</p>
         <div className="flex justify-center space-x-6 mb-8">
@@ -30,24 +41,38 @@ export default function ProfileContent() {
             <Button
               text="Información personal"
               style="w-full bg-[#A38D6D] hover:bg-amber-500  text-white py-3 rounded-full shadow-md"
+              onClick={handleGeneric} // Aquí se redirige a la página de Generic
             />
             <Button
               text="Información de contacto"
               style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
+              onClick={handleGeneric} // Aquí se redirige a la página de Generic
             />
             <Button
               text="Logros"
               style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
+              onClick={handleGeneric} // Aquí se redirige a la página de Generic
             />
             <Button
               text="Cambios de contraseña"
               style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
+              onClick={handleGeneric} // Aquí se redirige a la página de Generic
             />
             <Button
-              text="Cambios de contraseña"
+              text="Soporte"
               style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
+              onClick={handleGeneric} // Aquí se redirige a la página de Generic
             />
         </div>
+         <Card className="p- text-center">
+                  <h2 className="text-primary-dark text-xl font-semibold mb-4"></h2>
+                  <Button
+                     text="Salir"
+                     style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white font-bold py-3 rounded-md mt-4"
+                     onClick={handleHome}
+                    />
+        
+          </Card>
     </div>
   );
 }

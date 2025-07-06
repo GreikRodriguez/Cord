@@ -1,10 +1,11 @@
+
 //clase usada como simulador de router 
 import React, { useState } from 'react';
 // Importa las páginas que quieras alternar para pruebas
 // Asumo que estas páginas ya existen o las crearás con su contenido
 
 import AcordePage from './components/pages/AcordePage';
-import RegistroPage from './components/pages/RegistroPage';
+import RegistrePage from './components/pages/RegistrePage';
 import HomePage from './components/pages/HomePage';
 import NewEventPage from './components/pages/NewEventPage';
 import CreateEventPage from './components/pages/CreateEventPage'; 
@@ -30,8 +31,8 @@ export default function App() {
     switch (currentPage) {
       case 'welcome': return <HomePage />;
       case 'acorde': return <AcordePage />;
-      case 'login': return <RegistroPage />;
-      case 'register': return <RegistroPage />;
+      case 'login': return <RegistrePage />;
+      case 'register': return <RegistrePage />;
       case 'home': return <HomePage />;
       case 'profile': return <ProfilePage />;
       case 'calendar': return <CalendarPage />;

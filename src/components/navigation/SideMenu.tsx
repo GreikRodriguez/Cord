@@ -10,8 +10,6 @@ interface SideMenuProps {
   
 }
 
-
-
 export default function SideMenu(props: SideMenuProps) {
 
 const navigate = useNavigate();
@@ -41,19 +39,19 @@ const handlePerfil = () => {
     navigate({ to: '/notificaciones' });
   };
 
-  const handleConfiguraciones = () => {
-    // Redirige al usuario a la página de registro
-    navigate({ to: '/configuraciones' });
-  }
-
-  const handleEstadisticas = () => {
-    // Redirige al usuario a la página de registro
-    navigate({ to: '/estadisticas' });
-  }
-
   const handleSoporte = () => {
     // Redirige al usuario a la página de registro
     navigate({ to: '/soporte' });
+  }
+
+  const handleCerrarSesion = () => {
+    // Redirige al usuario a la página de Acorde
+    navigate({ to: '/Acorde' });
+  };
+
+  const handleAboutUs = () => {
+    // Redirige al usuario a la página de AboutUs
+    navigate({ to: '/AboutUs' });
   }
 
   // Clases para controlar la visibilidad y animación del menú
@@ -87,10 +85,8 @@ const handlePerfil = () => {
                   onClick={handleOrganizadores}/>
                   <Button text="Notificaciones" style="block w-full text-left py-2 px-4 rounded-lg text-white hover:bg-accent-brown" 
                   onClick={handleNotificaciones}/>
-                  <Button text="Configuraciones" style="block w-full text-left py-2 px-4 rounded-lg text-white hover:bg-accent-brown"
-                  onClick={handleConfiguraciones}/>
-                  <Button text="Estadísticas" style="block w-full text-left py-2 px-4 rounded-lg text-white hover:bg-accent-brown"
-                  onClick={handleEstadisticas}/>
+                  <Button text="Acerca de nosostros" style="block w-full text-left py-2 px-4 rounded-lg text-white hover:bg-accent-brown"
+                  onClick={handleAboutUs}/>
                   <Button text="Soporte" style="block w-full text-left py-2 px-4 rounded-lg text-white hover:bg-accent-brown"
                   onClick={handleSoporte}/>
               </nav>
@@ -98,7 +94,7 @@ const handlePerfil = () => {
           <Button
             text="Cerrar sesión"
             style="block w-full text-left py-2 px-4 rounded-lg text-white bg-red-600 hover:bg-red-700"
-            // onClick={handleLogout} // Si tuvieras una función de logout
+            onClick={handleCerrarSesion} 
           />
       </div>
     </>

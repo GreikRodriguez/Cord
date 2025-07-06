@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import NavBar from "../common/NavBar";
 import SideMenu from "../navigation/SideMenu";
 interface PageLayoutProps {
-  children: React.ReactNode; 
+  children: React.ReactNode; //enviamos el children como un node
   // Contenido principal de la página
   //usamos children para que el layout pueda envolver cualquier contenido que se le pase
   //children es una propiedad especial de React que permite pasar contenido entre las etiquetas de apertura y

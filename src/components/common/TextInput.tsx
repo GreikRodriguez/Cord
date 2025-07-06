@@ -1,3 +1,4 @@
+//Este documento esta pensado para entradas de texto pequeñas, como un input de texto o un campo de búsqueda. Un "respuesat corta"
 interface TextInputProps {
   id: string;
   text: string; // Para la etiqueta

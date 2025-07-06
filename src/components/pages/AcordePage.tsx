@@ -1,6 +1,5 @@
 import LogoAcorde from "../common/LogoAcorde";
 import LetrasAcorde from "../ui/LetrasAcorde";
-import React from 'react';
 import { useNavigate } from '@tanstack/react-router';
 
 

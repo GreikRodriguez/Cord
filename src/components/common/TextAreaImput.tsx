@@ -1,10 +1,13 @@
 // src/components/common/TextAreaInput.tsx
+// Este componente es un TextArea que se expande automáticamente a medida que el usuario escribe.
+//Función: Se utiliza específicamente para campos de entrada de múltiples líneas de texto, donde se espera que el usuario escriba párrafos, descripciones extensas, comentarios, etc.
+
 import React, { useRef, useEffect } from 'react';
 
 interface TextAreaInputProps {
   label: string; // El texto que va en la etiqueta superior (e.g., "Descripción")
   id: string;    // El ID único para el textarea y el htmlFor de la etiqueta
-  className?: string; // Opcional, para clases adicionales de Tailwind
+  style?: string; // Opcional, para clases adicionales de Tailwind
   initialHeight?: number; // Altura inicial en píxeles
   value?: string; // Para controlar el valor (opcional)
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void; // Para manejar cambios (opcional)
@@ -43,8 +46,8 @@ export default function TextAreaInput(props: TextAreaInputProps) {
   // 'resize-none' para deshabilitar el redimensionamiento manual del usuario
   // 'overflow-hidden' para evitar barras de desplazamiento hasta que se expanda
 
-  // Combina las clases base con cualquier className pasado como prop
-  const combinedTextareaClasses = `${baseTextareaClasses} ${props.className || ''}`.trim();
+  // Combina las clases base con cualquier style pasado como prop
+  const combinedTextareaClasses = `${baseTextareaClasses} ${props.style || ''}`.trim();
 
   return (
     <div className="mb-4">

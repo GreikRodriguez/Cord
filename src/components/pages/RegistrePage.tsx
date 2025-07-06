@@ -24,10 +24,10 @@ const navigate = useNavigate();
                 <div>
                     <form>
                         <div className="mb-4">
-                            <TextInput id="event-name" text="Nombre" inputType="text" style="mb-4" />
+                            <TextInput id="email" text="Correo electronico" inputType="text" style="mb-4" />
                         </div>
                         <div className="mb-6">
-                            <TextInput id="event-name" text="Password" inputType="text" style="mb-4" />
+                            <TextInput id="password" text="Password" inputType="text" style="mb-4" />
                         </div>
                         <div className="flex items-center justify-center">
                             <Button style="w-full bg-[#D3B382] hover:bg-[#E4C581] text-zinc-800 hover:text-zinc-600 font-bold py-3 rounded-lg text-lg mb-6" text="Registrarse" onClick={handleAnyClick} />

@@ -1,9 +1,21 @@
 import LogoAcorde from "../common/LogoAcorde";
 import LetrasAcorde from "../ui/LetrasAcorde";
+import React from 'react';
+import { useNavigate } from '@tanstack/react-router';
+
 
 export default function AcordePage() {
+
+    const navigate = useNavigate();
+
+  const handleAnyClick = () => {
+    // Redirige al usuario a la página de registro
+    navigate({ to: '/register' });
+  };
+
     return (
-    <div className="min-h-screen min-w-screen flex items-center justify-center bg-[#EBEAFC]">
+    <div className="min-h-screen min-w-screen flex items-center justify-center bg-[#EBEAFC]"
+        onClick={handleAnyClick}>
         <div className="text-center">
             <LogoAcorde style="mx-auto my-auto max-w-60 max-h-60 mb-4" src="src/assets/imgs/LogoAcordeAzul.png"/>
             <LetrasAcorde style="text-6xl font-bold text-[#2C558D]" text="ACORDE"/>

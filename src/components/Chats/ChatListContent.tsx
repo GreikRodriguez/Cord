@@ -11,11 +11,11 @@ export default function ChatListContent(props: ChatListContentProps) {
         <div className="flex space-x-4 mb-6">
             <Button
               text="Nuevo chat"
-              style={`flex-1 font-bold py-2 rounded-lg text-center ${props.chatType === 'personal' ? 'bg-accent-brown text-white' : 'bg-white text-primary-dark shadow'}`}
+              style={`flex-1 font-bold py-2 rounded-lg text-center ${props.chatType === 'personal' ? 'bg-[#A38D6D] hover:bg-amber-500 text-white' : 'bg-white text-primary-dark shadow'}`}
             />
             <Button
               text="Chats de eventos"
-              style={`flex-1 font-bold py-2 rounded-lg text-center ${props.chatType === 'events' ? 'bg-accent-brown text-white' : 'bg-white text-primary-dark shadow'}`}
+              style={`flex-1 font-bold py-2 rounded-lg text-center ${props.chatType === 'events' ? 'bg-[#A38D6D] hover:bg-amber-500 text-white' : 'bg-white text-primary-dark shadow'}`}
             />
             <Button
               text="Inicio"

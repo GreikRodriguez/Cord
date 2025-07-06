@@ -1,7 +1,16 @@
 import TextInput from "../common/TextInput"; 
 import Button from "../common/Button";
+import { useNavigate } from '@tanstack/react-router';
 
 export default function CreateEventPage() {
+
+    const navigate = useNavigate();
+        
+          const handleAnyClick = () => {
+            // Redirige al usuario a la página de registro
+            navigate({ to: '/home' });
+          };
+
     return (
 <div className="min-h-screen bg-[#F1EEF9] p-4">
     <div className="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -112,7 +121,7 @@ export default function CreateEventPage() {
 
     <div className="flex justify-between mt-8">
         <Button style="bg-gray-500 hover:bg-[#A38D6D] text-white font-bold py-3 px-6 rounded-lg text-lg" text="Salir "/>
-        <Button style="bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-3 px-6 rounded-lg text-lg" text="Terminar"/>
+        <Button style="bg-[#B99F7B] hover:bg-[#A38D6D] text-white font-bold py-3 px-6 rounded-lg text-lg" text="Terminar" onClick={handleAnyClick}/>
     </div>
 </div>
 

@@ -32,7 +32,6 @@ import OrgPage from './components/pages/OrganizerPage'
 import Notifications from './components/pages/NotificationsPage'
 
 
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
 

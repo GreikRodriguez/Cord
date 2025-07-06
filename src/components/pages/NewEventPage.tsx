@@ -8,6 +8,7 @@ import Button from '../common/Button';
 import Modal from '../common/Modal'; // Asegúrate de que el modal esté correctamente importado
 import CategorySelectionModalContent from '../eventCreation/CatSelectionModalContent'; // Importa el contenido del modal
 
+
 export default function NewEventPage() {
   const [eventName, setEventName] = useState('');
   const [eventDescription, setEventDescription] = useState('');
@@ -22,6 +23,10 @@ export default function NewEventPage() {
   };
 
   return (
+    
+
+    <div>   </div>
+    /*
     <div className="min-h-screen bg-light-bg p-4">
         <div className="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 className="text-primary-dark text-xl font-semibold mb-4">Detalles del Evento</h2>
@@ -44,7 +49,7 @@ export default function NewEventPage() {
                 <input type="date" className="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-light-bg"/>
             </div>
 
-            {/* ... otros campos como Duracion, Portada, Privacidad ... */}
+            {/* ... otros campos como Duracion, Portada, Privacidad ... }
 
             <div className="mb-6">
                 <label htmlFor="event-description" className="block text-gray-700 text-sm font-semibold mb-2">Descripcion</label>
@@ -58,7 +63,7 @@ export default function NewEventPage() {
                 />
             </div>
 
-            {/* ... Puedes añadir una sección para mostrar las categorías seleccionadas */}
+            {/* ... Puedes añadir una sección para mostrar las categorías seleccionadas }
             {selectedCategories.length > 0 && (
                 <div className="mb-6">
                     <p className="text-gray-700 text-sm font-semibold mb-2">Categorías Seleccionadas:</p>
@@ -84,20 +89,21 @@ export default function NewEventPage() {
             />
         </div>
 
-        {/* ... el resto de la página ... */}
+        {/* ... el resto de la página ... }
 
-        {/* El modal de selección de categorías */}
+        {/* El modal de selección de categorías }
         <Modal
             isOpen={showCategoryModal} // Controla la visibilidad del modal
             onClose={() => setShowCategoryModal(false)} // Función para cerrar el modal
             title="Categorias" // Título opcional para el modal genérico
         >
-            {/* Contenido del modal: se le pasan las funciones para interactuar */}
+            {/* Contenido del modal: se le pasan las funciones para interactuar }
             <CategorySelectionModalContent
                 onClose={() => setShowCategoryModal(false)} // Cierra el modal desde el contenido
                 onSelectCategories={handleSaveCategories} // Maneja la selección de categorías
             />
         </Modal>
     </div>
-  );
+  );*/
+        )
 }

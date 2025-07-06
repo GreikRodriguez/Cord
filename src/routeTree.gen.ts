@@ -8,10 +8,79 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
+import { createRootRoute } from '@tanstack/react-router'
+
+import { Route as SoporteRouteImport } from './routes/soporte'
+import { Route as RegisterRouteImport } from './routes/register'
+import { Route as PerfilRouteImport } from './routes/perfil'
+import { Route as OrganizadoresRouteImport } from './routes/organizadores'
+import { Route as NotificacionesRouteImport } from './routes/notificaciones'
+import { Route as NeweventRouteImport } from './routes/newevent'
+import { Route as HomeRouteImport } from './routes/home'
+import { Route as EstadisticasRouteImport } from './routes/estadisticas'
+import { Route as ConfiguracionesRouteImport } from './routes/configuraciones'
+import { Route as ChatsRouteImport } from './routes/chats'
+import { Route as CalendarioRouteImport } from './routes/calendario'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const rootRouteImport = createRootRoute()
+
+const SoporteRoute = SoporteRouteImport.update({
+  id: '/soporte',
+  path: '/soporte',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerfilRoute = PerfilRouteImport.update({
+  id: '/perfil',
+  path: '/perfil',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrganizadoresRoute = OrganizadoresRouteImport.update({
+  id: '/organizadores',
+  path: '/organizadores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificacionesRoute = NotificacionesRouteImport.update({
+  id: '/notificaciones',
+  path: '/notificaciones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NeweventRoute = NeweventRouteImport.update({
+  id: '/newevent',
+  path: '/newevent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeRoute = HomeRouteImport.update({
+  id: '/home',
+  path: '/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EstadisticasRoute = EstadisticasRouteImport.update({
+  id: '/estadisticas',
+  path: '/estadisticas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfiguracionesRoute = ConfiguracionesRouteImport.update({
+  id: '/configuraciones',
+  path: '/configuraciones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChatsRoute = ChatsRouteImport.update({
+  id: '/chats',
+  path: '/chats',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CalendarioRoute = CalendarioRouteImport.update({
+  id: '/calendario',
+  path: '/calendario',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -26,31 +95,192 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/calendario': typeof CalendarioRoute
+  '/chats': typeof ChatsRoute
+  '/configuraciones': typeof ConfiguracionesRoute
+  '/estadisticas': typeof EstadisticasRoute
+  '/home': typeof HomeRoute
+  '/newevent': typeof NeweventRoute
+  '/notificaciones': typeof NotificacionesRoute
+  '/organizadores': typeof OrganizadoresRoute
+  '/perfil': typeof PerfilRoute
+  '/register': typeof RegisterRoute
+  '/soporte': typeof SoporteRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/calendario': typeof CalendarioRoute
+  '/chats': typeof ChatsRoute
+  '/configuraciones': typeof ConfiguracionesRoute
+  '/estadisticas': typeof EstadisticasRoute
+  '/home': typeof HomeRoute
+  '/newevent': typeof NeweventRoute
+  '/notificaciones': typeof NotificacionesRoute
+  '/organizadores': typeof OrganizadoresRoute
+  '/perfil': typeof PerfilRoute
+  '/register': typeof RegisterRoute
+  '/soporte': typeof SoporteRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/calendario': typeof CalendarioRoute
+  '/chats': typeof ChatsRoute
+  '/configuraciones': typeof ConfiguracionesRoute
+  '/estadisticas': typeof EstadisticasRoute
+  '/home': typeof HomeRoute
+  '/newevent': typeof NeweventRoute
+  '/notificaciones': typeof NotificacionesRoute
+  '/organizadores': typeof OrganizadoresRoute
+  '/perfil': typeof PerfilRoute
+  '/register': typeof RegisterRoute
+  '/soporte': typeof SoporteRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/calendario'
+    | '/chats'
+    | '/configuraciones'
+    | '/estadisticas'
+    | '/home'
+    | '/newevent'
+    | '/notificaciones'
+    | '/organizadores'
+    | '/perfil'
+    | '/register'
+    | '/soporte'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about'
-  id: '__root__' | '/' | '/about'
+  to:
+    | '/'
+    | '/about'
+    | '/calendario'
+    | '/chats'
+    | '/configuraciones'
+    | '/estadisticas'
+    | '/home'
+    | '/newevent'
+    | '/notificaciones'
+    | '/organizadores'
+    | '/perfil'
+    | '/register'
+    | '/soporte'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/calendario'
+    | '/chats'
+    | '/configuraciones'
+    | '/estadisticas'
+    | '/home'
+    | '/newevent'
+    | '/notificaciones'
+    | '/organizadores'
+    | '/perfil'
+    | '/register'
+    | '/soporte'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  CalendarioRoute: typeof CalendarioRoute
+  ChatsRoute: typeof ChatsRoute
+  ConfiguracionesRoute: typeof ConfiguracionesRoute
+  EstadisticasRoute: typeof EstadisticasRoute
+  HomeRoute: typeof HomeRoute
+  NeweventRoute: typeof NeweventRoute
+  NotificacionesRoute: typeof NotificacionesRoute
+  OrganizadoresRoute: typeof OrganizadoresRoute
+  PerfilRoute: typeof PerfilRoute
+  RegisterRoute: typeof RegisterRoute
+  SoporteRoute: typeof SoporteRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/soporte': {
+      id: '/soporte'
+      path: '/soporte'
+      fullPath: '/soporte'
+      preLoaderRoute: typeof SoporteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/perfil': {
+      id: '/perfil'
+      path: '/perfil'
+      fullPath: '/perfil'
+      preLoaderRoute: typeof PerfilRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/organizadores': {
+      id: '/organizadores'
+      path: '/organizadores'
+      fullPath: '/organizadores'
+      preLoaderRoute: typeof OrganizadoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notificaciones': {
+      id: '/notificaciones'
+      path: '/notificaciones'
+      fullPath: '/notificaciones'
+      preLoaderRoute: typeof NotificacionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/newevent': {
+      id: '/newevent'
+      path: '/newevent'
+      fullPath: '/newevent'
+      preLoaderRoute: typeof NeweventRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home': {
+      id: '/home'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/estadisticas': {
+      id: '/estadisticas'
+      path: '/estadisticas'
+      fullPath: '/estadisticas'
+      preLoaderRoute: typeof EstadisticasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/configuraciones': {
+      id: '/configuraciones'
+      path: '/configuraciones'
+      fullPath: '/configuraciones'
+      preLoaderRoute: typeof ConfiguracionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chats': {
+      id: '/chats'
+      path: '/chats'
+      fullPath: '/chats'
+      preLoaderRoute: typeof ChatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calendario': {
+      id: '/calendario'
+      path: '/calendario'
+      fullPath: '/calendario'
+      preLoaderRoute: typeof CalendarioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -71,6 +301,17 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  CalendarioRoute: CalendarioRoute,
+  ChatsRoute: ChatsRoute,
+  ConfiguracionesRoute: ConfiguracionesRoute,
+  EstadisticasRoute: EstadisticasRoute,
+  HomeRoute: HomeRoute,
+  NeweventRoute: NeweventRoute,
+  NotificacionesRoute: NotificacionesRoute,
+  OrganizadoresRoute: OrganizadoresRoute,
+  PerfilRoute: PerfilRoute,
+  RegisterRoute: RegisterRoute,
+  SoporteRoute: SoporteRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

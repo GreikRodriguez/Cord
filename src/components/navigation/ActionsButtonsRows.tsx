@@ -28,7 +28,7 @@ export default function ActionButtonsRow(props: ActionButtonsRowProps) {
                     text={button.text}
                     onClick={button.onClick}
                     // Aquí fusionamos los estilos base con los estilos específicos del botón
-                    style={`${button.isPrimary ? 'bg-accent-brown text-white hover:bg-[#A38D6D]' : 'bg-white text-primary-dark shadow hover:bg-gray-100'} font-bold py-2 px-4 rounded-lg flex-1 mx-1 ${button.style || ''}`}
+                    style={`${button.isPrimary ? 'bg-[#A38D6D] hover:bg-amber-500' : 'bg-white text-primary-dark shadow hover:bg-gray-100'} font-bold py-2 px-4 rounded-lg flex-1 mx-1 ${button.style || ''}`}
                 />
             ))}
         </div>

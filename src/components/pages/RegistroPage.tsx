@@ -2,8 +2,19 @@ import Button from "../common/Button";
 import TextInput from "../common/TextInput";
 import LogoAcorde from "../common/LogoAcorde";
 import LetrasAcorde from "../ui/LetrasAcorde";
+import React from 'react';
+import { useNavigate } from '@tanstack/react-router';
 
-export default function HomePage() {
+export default function RegistroPage() {
+
+
+const navigate = useNavigate();
+
+  const handleAnyClick = () => {
+    // Redirige al usuario a la página de registro
+    navigate({ to: '/home' });
+  };
+
     return (
         <div className="flex max-w-screen h-screen items-center justify-center bg-[#F1EEF9]">
             <div className="max-w-screen-xl max-h-screen">
@@ -20,7 +31,7 @@ export default function HomePage() {
                             <TextInput id="event-name" text="Password" inputType="text" style="mb-4" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <Button style="w-full bg-[#D3B382] hover:bg-[#E4C581] text-zinc-800 hover:text-zinc-600 font-bold py-3 rounded-lg text-lg mb-6" text="Registrarse" />
+                            <Button style="w-full bg-[#D3B382] hover:bg-[#E4C581] text-zinc-800 hover:text-zinc-600 font-bold py-3 rounded-lg text-lg mb-6" text="Registrarse" onClick={handleAnyClick} />
                         </div>
                     </form>
                 </div>

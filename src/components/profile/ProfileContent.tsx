@@ -29,15 +29,23 @@ export default function ProfileContent() {
             {/* Usando el componente Button */}
             <Button
               text="Información personal"
-              style="w-full bg-accent-brown hover:bg-[#A38D6D] text-white py-3 rounded-full shadow-md"
+              style="w-full bg-[#A38D6D] hover:bg-amber-500  text-white py-3 rounded-full shadow-md"
             />
             <Button
               text="Información de contacto"
-              style="w-full bg-accent-brown hover:bg-[#A38D6D] text-white py-3 rounded-full shadow-md"
+              style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
             />
             <Button
               text="Logros"
-              style="w-full bg-accent-brown hover:bg-[#A38D6D] text-white py-3 rounded-full shadow-md"
+              style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
+            />
+            <Button
+              text="Cambios de contraseña"
+              style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
+            />
+            <Button
+              text="Cambios de contraseña"
+              style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
             />
         </div>
     </div>

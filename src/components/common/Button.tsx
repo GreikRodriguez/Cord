@@ -19,7 +19,7 @@ interface ButtonProps {
 export default function Button(props: ButtonProps) {
   return (
     <button
-      className={props.style}
+      className={props.style } 
       onClick={props.onClick}
       type={props.type || "button"} // al colocarlo con "|| "button"" se asegura de que el botón sea de tipo "button" por defecto sino le meten el prop
 

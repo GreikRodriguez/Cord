@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import App from '../App'
+import Acorde from '../components/pages/AcordePage'
 
 export const Route = createFileRoute('/')({
   component: RouteComponent,
@@ -7,6 +7,6 @@ export const Route = createFileRoute('/')({
 
 function RouteComponent() {
   return (
-    <App />
+    <Acorde />
   )
 }

@@ -7,14 +7,14 @@ export default function AcordePage() {
 
     const navigate = useNavigate();
 
-  const handleAnyClick = () => {
+  const handleLogIn = () => {
     // Redirige al usuario a la página de registro
-    navigate({ to: '/register' });
+    navigate({ to: '/LogIn' });
   };
 
     return (
     <div className="min-h-screen min-w-screen flex items-center justify-center bg-[#EBEAFC]"
-        onClick={handleAnyClick}>
+        onClick={handleLogIn}>
         <div className="text-center">
             <LogoAcorde style="mx-auto my-auto max-w-60 max-h-60 mb-4" src="src/assets/imgs/LogoAcordeAzul.png"/>
             <LetrasAcorde style="text-6xl font-bold text-[#2C558D]" text="ACORDE"/>
